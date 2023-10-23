@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*
  */
 @RestController
 class DemoController {
+
     @PostMapping("/hello")
     fun helloWorld(): BaseResponse<String> {
         return BaseResponse.success("good")

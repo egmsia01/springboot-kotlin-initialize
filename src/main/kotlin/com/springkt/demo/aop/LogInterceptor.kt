@@ -21,7 +21,7 @@ import java.util.*
 @Component
 class LogInterceptor {
 
-    private val logger: Logger = LoggerFactory.getLogger(javaClass)
+    private val log: Logger = LoggerFactory.getLogger(javaClass)
 
     @Around("execution(* com.springkt.demo.controller.*.*(..))")
     fun doInterceptor(point: ProceedingJoinPoint): Any? {
@@ -36,7 +36,7 @@ class LogInterceptor {
         val args = point.args
         val reqParam = args?.joinToString(", ") { it.toString() } ?: "null"
 
-        logger.info(
+        log.info(
             "request start, id => {}, path => {}, ip => {}, params => {}",
             requestId,
             url,
@@ -47,12 +47,12 @@ class LogInterceptor {
         val result: Any = try {
             point.proceed()
         } catch (e: Throwable) {
-            logger.error("An error occurred while processing the request: $e")
+            log.error("An error occurred while processing the request: $e")
             throw e
         } finally {
             stopWatch.stop()
             val totalTimeMillis = stopWatch.totalTimeMillis
-            logger.info("request end, id => {}, cost => {}ms", requestId, totalTimeMillis)
+            log.info("request end, id => {}, cost => {}ms", requestId, totalTimeMillis)
         }
 
         return result
