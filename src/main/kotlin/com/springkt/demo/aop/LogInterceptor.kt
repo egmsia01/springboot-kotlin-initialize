@@ -11,6 +11,12 @@ import org.springframework.web.context.request.RequestContextHolder
 import org.springframework.web.context.request.ServletRequestAttributes
 import java.util.*
 
+/**
+ * 请求日志
+ *
+ * @author Ge Mingjia
+ * @date 2023/10/21
+ */
 @Aspect
 @Component
 class LogInterceptor {

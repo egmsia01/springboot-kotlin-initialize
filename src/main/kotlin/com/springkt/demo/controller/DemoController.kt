@@ -1,5 +1,6 @@
 package com.springkt.demo.controller
 
+import com.springkt.demo.common.BaseResponse
 import org.springframework.web.bind.annotation.*
 
 /**
@@ -9,12 +10,12 @@ import org.springframework.web.bind.annotation.*
 @RestController
 class DemoController {
     @PostMapping("/hello")
-    fun helloWorld(): String {
-        return "Hello World!"
+    fun helloWorld(): BaseResponse<String> {
+        return BaseResponse.success("good")
     }
 
     @GetMapping("/user/{name}")
-    fun getName(@PathVariable name: String): String {
-        return "Hello, $name!"
+    fun getName(@PathVariable name: String): BaseResponse<String> {
+        return BaseResponse.success("Hello, $name!")
     }
 }
