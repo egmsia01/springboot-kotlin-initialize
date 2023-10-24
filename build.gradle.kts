@@ -28,6 +28,7 @@ dependencies {
     implementation("com.mybatis-flex:mybatis-flex-core:1.7.2")
     implementation("mysql:mysql-connector-java:8.0.26")
     implementation("com.github.xiaoymin:knife4j-openapi3-jakarta-spring-boot-starter:4.3.0")
+    implementation("cn.dev33:sa-token-spring-boot-starter:1.37.0")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

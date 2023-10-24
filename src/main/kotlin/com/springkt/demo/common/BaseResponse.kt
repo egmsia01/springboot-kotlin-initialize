@@ -8,7 +8,6 @@ import org.springframework.http.HttpStatus;
  * @param <T>
  * @author miku
  */
-
 data class BaseResponse<T>(
     val code: Int,
     val data: T?,
