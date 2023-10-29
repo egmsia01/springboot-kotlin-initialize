@@ -1,4 +1,4 @@
-package com.springkt.demo.common;
+package com.springkt.demo.common
 
 /**
  * 错误码

@@ -1,6 +1,6 @@
-package com.springkt.demo.exception;
+package com.springkt.demo.exception
 
-import com.springkt.demo.common.ErrorCode;
+import com.springkt.demo.common.ErrorCode
 
 /**
  * 自定义异常类

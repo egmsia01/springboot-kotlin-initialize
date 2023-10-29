@@ -12,13 +12,13 @@ fun main(args: Array<String>) {
     val application = runApplication<KotlinApplication>(*args)
     val env: Environment = application.environment
     println(
-    """
-    |------------------------------------------------------------
-    |   Application '${env.getProperty("spring.application.name")}' is running!
-    |   Local:     http://localhost:${env.getProperty("server.port")}
-    |   External:  http://${InetAddress.getLocalHost().hostAddress}:${env.getProperty("server.port")}
-    |   Doc:       http://${InetAddress.getLocalHost().hostAddress}:${env.getProperty("server.port")}/api/doc.html#/home
-    |------------------------------------------------------------
-    """
+        """
+        |------------------------------------------------------------
+        |   Application '${env.getProperty("spring.application.name")}' is running!
+        |   Local:     http://localhost:${env.getProperty("server.port")}
+        |   External:  http://${InetAddress.getLocalHost().hostAddress}:${env.getProperty("server.port")}
+        |   Doc:       http://${InetAddress.getLocalHost().hostAddress}:${env.getProperty("server.port")}/api/doc.html#/home
+        |------------------------------------------------------------
+        """
     )
 }

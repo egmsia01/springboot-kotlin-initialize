@@ -1,6 +1,6 @@
-package com.springkt.demo.common;
+package com.springkt.demo.common
 
-import org.springframework.http.HttpStatus;
+import org.springframework.http.HttpStatus
 
 /**
  * 通用返回类
